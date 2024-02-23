@@ -1,0 +1,25 @@
+type Book {
+  id: ID! @id
+  title: String!
+  author: String!
+  publicationYear: Date!
+  createdAt: Date!
+  updatedAt: Date!
+}
+
+type User {
+  id: ID! @id
+  name: String!
+  email: String!
+  password: String!
+  createdAt: Date!
+  updatedAt: Date!
+}
+
+type Loan {
+  id: ID! @id
+  userId: User! @relation(link: INLINE)
+  bookId: Book! @relation(link: INLINE)
+  loanDate: Date!
+  returnDate: Date?
+}

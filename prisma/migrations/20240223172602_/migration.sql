@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "Loan" ALTER COLUMN "returnDateTime" SET DEFAULT CURRENT_TIMESTAMP;
